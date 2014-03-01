@@ -1,4 +1,5 @@
-Contracts = new Meteor.Collections('contracts');
+Contracts = new Meteor.Collection('contracts');
+Blocks = new Meteor.Collection('blocks');
 
 if (Meteor.isClient) {
   
