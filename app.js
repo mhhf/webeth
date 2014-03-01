@@ -1,4 +1,7 @@
+Contracts = new Meteor.Collections('contracts');
+
 if (Meteor.isClient) {
+  
   Template.hello.greeting = function () {
     return "Welcome to app.";
   };
