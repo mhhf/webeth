@@ -1,0 +1,21 @@
+<template name="blocks">
+<h1 id="blocks">Blocks</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nummer</th>
+      <th>Hash</th>
+      <th>Timestamp</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each blocks}}
+  <tr>
+    <td>{{number}}</td>
+    <td>{{hash}}</td>
+    <td>{{timestamp}}</td>
+  </tr>
+  {{/each}}
+  </tbody>
+</table>
+</template>

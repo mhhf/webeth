@@ -1,0 +1,19 @@
+<template name="contracts">
+<h1 id="contracts">Contracts</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Balance</th>
+      <th>Memory</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each contracts}}
+  <tr>
+    <td>{{balance}}</td>
+    <td>{{getMemory}}</td>
+  </tr>
+  {{/each}}
+  </tbody>
+</table>
+</template>
