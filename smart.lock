@@ -3,7 +3,10 @@
   "dependencies": {
     "basePackages": {
       "iron-router": {},
-      "spin": {}
+      "spin": {},
+      "dateformatjs": {},
+      "codemirror": {},
+      "google-authenticator": {}
     },
     "packages": {
       "iron-router": {
@@ -15,6 +18,21 @@
         "git": "https://github.com/SachaG/meteor-spin.git",
         "tag": "v0.2.2",
         "commit": "3f655f0016228e4195acc784c45d3e3a247dc39f"
+      },
+      "dateformatjs": {
+        "git": "https://github.com/sunkay/meteor-date-format.git",
+        "tag": "v0.1.4",
+        "commit": "7e0674b1e453e055958afc56a2170bfe269bf80d"
+      },
+      "codemirror": {
+        "git": "https://github.com/digioak/meteor-codemirror.git",
+        "tag": "v0.0.2",
+        "commit": "39185b6e97c485e7cd65a2ef84190923c050b0d8"
+      },
+      "google-authenticator": {
+        "git": "https://github.com/denkhaus/google-authenticator.git",
+        "tag": "v0.0.2",
+        "commit": "4a750938db346a3681a58ff37bced96e12ab7662"
       }
     }
   }

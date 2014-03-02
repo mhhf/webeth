@@ -1,6 +1,9 @@
 {
   "packages": {
     "iron-router": {},
-    "spin": {}
+    "spin": {},
+    "dateformatjs": {},
+    "codemirror": {},
+    "google-authenticator": {}
   }
 }

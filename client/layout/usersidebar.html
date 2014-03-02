@@ -1,0 +1,7 @@
+<template name="userSideBar">
+  <ul>
+    <a href="{{pathFor 'userAddress'}}"> <li class="{{isActive '/user/address'}}">Addresses</li> </a>
+    <a href="{{pathFor 'userContracts'}}"> <li class="{{isActive '/user/contract'}}">Contracts</li> </a>
+    <a href="{{pathFor 'userSettings'}}"> <li class="{{isActive '/user/settings'}}">Settings</li> </a>
+  </ul>
+</template>

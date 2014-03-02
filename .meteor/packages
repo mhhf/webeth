@@ -11,3 +11,7 @@ bootstrap
 iron-router
 less
 spin
+dateformatjs
+codemirror
+accounts-password
+google-authenticator

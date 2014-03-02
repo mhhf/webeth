@@ -1,0 +1,88 @@
+body {
+  color: #333;
+}
+
+input {
+  margin-left: 30px;
+  border: 0px #f00 solid !important;
+  -webkit-border-radius: 0px !important;
+  -webkit-box-shadow: none !important;
+  background: #e9e9e9 !important;
+  padding: 8px 12px !important;
+  display: block !important;
+}
+
+a, a:hover {
+  color: #333;
+  text-decoration: none;
+  background-color: none;
+}
+
+ul.nav, ul.nav li {
+  display: inline-block;
+  a {
+    color: #888;
+  }
+  &:hover a{
+    background-color: transparent !important;
+  }
+  &.primaryNav {
+    text-align: center;
+    width: 75%;
+    float: left;
+  }
+  &.accountNav {
+    width: 25%;
+  }
+  &.active{
+    border-top: 4px solid #828699;  
+    margin-top: 0px;
+    a {
+      color: #333;
+    }
+  }
+}
+ul.nav li:hover a {
+  color: #333;
+}
+
+ul.nav li {
+  margin: 4px 5px 4px 5px;
+}
+
+#navBarWrapper {
+  padding: 0 20px;
+  height: 28px;
+  background: #e9e9e9;
+}
+
+ul.nav.accountNav{
+  li {
+    float:right;
+  }
+}
+#naviContainer {
+  
+  ul {
+    margin-left: 4%;
+    li {
+      list-style: none;
+      // background: #e9e9e9;
+      margin: 5px 0px 5px 4px;
+      padding: 4px 10px;
+      &:hover, &.active {
+        // background: #d1d1d1;
+        margin-left: 0px;
+        border-left: 4px solid #828699;  
+      }
+      a {
+        color: #888;
+      }
+    }
+    
+  }
+}
+
+.clearFloat {
+  clear: both;
+}

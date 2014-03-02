@@ -3,5 +3,14 @@ Template.contracts.contracts = function(){
 }
 
 Template.contracts.getMemory = function(){
-  return JSON.stringify(this.memory);
+  var codeString = "";
+  _.each(this.memory, function(v,k,i){
+    codeString += intToInstruction(v) + " "
+  });
+  return codeString;
+}
+
+// [TODO] - export to a custom handlebars helper
+Template.contracts.getBalance = function(){
+  return formatNumber(this.balance);
 }

@@ -1,0 +1,15 @@
+<template name="navlayout">
+  <div class="row-fluid">
+    {{> navBar}}
+  </div>
+
+
+  <div class="row-fluid">
+    <div id="naviContainer" class="span3">
+      {{yield 'navi'}}
+    </div>
+    <div class="span8">
+      {{yield}}
+    </div>
+  </div>
+</template>

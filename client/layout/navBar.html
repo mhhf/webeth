@@ -1,0 +1,23 @@
+<template name="navBar">
+<div id="navBarWrapper">
+  <ul class="nav primaryNav">
+    <li class="{{isActive '/ '}}"> <a href="{{pathFor 'home'}}">Home</a> </li>
+    <!-- <li class="{{isActive '/add'}}"><a href="{{pathFor 'addCmi'}}">add Contract</a></li> -->
+    <li class="{{isActive '/blocks'}}"><a href="{{pathFor 'blocks'}}">Blocks</a></li>
+    <li class="{{isActive '/address'}}"><a href="{{pathFor 'addressList'}}">Address</a></li>
+    <li class="{{isActive '/contracts'}}"><a href="{{pathFor 'contracts'}}">Contracts</a></li>
+    <li class="{{isActive '/dev'}}"><a href="{{pathFor 'dev'}}">Develop</a></li>
+  </ul>
+
+  <ul class="nav pull-right accountNav">
+    {{#if currentUser}}
+      <li><a href="#" name="logout" > logout </a> </li>
+      <li class="{{isActive '/user'}}"><a href="{{pathFor 'userSettings'}}">{{currentUser.username}}</a></li>
+      <li><a href="{{pathFor 'userAddress'}}">10000 ether</a></li>
+    {{else}}
+      <li> <a href="{{pathFor 'signUp'}}" > signup </a> </li>
+      <li> <a href="{{pathFor 'login'}}" > login</a> </li>
+    {{/if}}
+  </ul>
+</div>
+</template>
