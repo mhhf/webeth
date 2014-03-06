@@ -1,8 +1,19 @@
 <template name="signUp">
-<form action="">
-  <input type="text" name="user" placeholder="Username..." />
-  <input type="password" name="password" placeholder="password"  />
-  <input type="password" name="password2" placeholder="retype password"  />
-  <input type="submit" value="Submit" />
-</form>
+<div class="row-fluid">
+  <div class="span4 offset4" id="loginWrapper">
+    <h2>SignUp:</h2>
+    <form action="">
+      <label>username:
+        <input type="text" name="user" placeholder="Username..." />
+      </label>
+      <label>password:
+        <input type="password" name="password" placeholder="password"  />
+      </label>
+      <label>retype password:
+        <input type="password" name="password2" placeholder="retype password"  />
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+</div>
 </template>

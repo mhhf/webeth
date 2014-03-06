@@ -8,6 +8,8 @@ Template.login.events = {
     Meteor.loginWithPassword( username, password, function( err, succ ){
       if(!err)
         Router.go('home');
+      else
+        $('#wrongPW').fadeIn();
     });
   }
 }

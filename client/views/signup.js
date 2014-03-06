@@ -26,7 +26,7 @@ Template.signUp.events = {
       username: username,
       password: password
     }, function(err, succ){
-      console.log(err, succ);
+      Router.go('home');
     });
   }
 }
