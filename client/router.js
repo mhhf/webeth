@@ -17,7 +17,7 @@ Router.map(function () {
   this.route('blocks', {
     path: '/blocks',
     before: function(){
-      Session.set('blockLimit', 10);
+      Session.set('blockLimit', 20);
     },
     action: function(){
       var blocksHandle;
@@ -37,7 +37,21 @@ Router.map(function () {
   });
   
   this.route('contracts', {
-    path: '/contracts'
+    path: '/contracts',
+    before: function(){
+      Session.set('contractLimit',20);
+    },
+    action: function(){
+      var contractsHandler;
+      
+      Deps.autorun( function(){
+        var newContractHandle = Meteor.subscribe('contracts',Session.get('contractLimit'));
+        if( contractsHandler ) contractsHandler.stop();
+        contractsHandler = newContractHandle;
+      });
+      
+      this.render();
+    }
   });
   
   this.route('dev', {

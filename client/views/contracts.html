@@ -3,17 +3,20 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Balance</th>
-      <th>Memory</th>
+      <th>balance</th>
+      <th>hash</th>
     </tr>
   </thead>
   <tbody>
   {{#each contracts}}
   <tr>
     <td>{{getBalance}}</td>
-    <td>{{getMemory}}</td>
+    <td>{{_id}}</td>
   </tr>
   {{/each}}
+  <tr>
+    <td colspan="3" id="showMore"> <center>loading...</center> </td>
+  </tr>
   </tbody>
 </table>
 </template>

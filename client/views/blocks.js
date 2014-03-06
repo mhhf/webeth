@@ -15,7 +15,6 @@ scrollHandler = function(){
  
     if (target.offset().top < threshold) { 
       // Increase limit by 10 if there are more blocks
-      console.log(( cLimit = Session.get('blockLimit') )-10, Blocks.find().count());
       var cLimit;
       if( ( cLimit = Session.get('blockLimit') )-10 <= Blocks.find().count() ) 
         Session.set('blockLimit',cLimit + 10 );

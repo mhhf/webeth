@@ -3,3 +3,7 @@ Meteor.publish('blocks', function( limit ){
   // return Blocks.find({});
 });
 
+Meteor.publish('contracts', function( limit ){
+  return Contracts.find({}, { limit: limit });
+  // return Blocks.find({});
+});
