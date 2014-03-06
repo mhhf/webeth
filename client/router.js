@@ -15,7 +15,21 @@ Router.map(function () {
   });
   
   this.route('blocks', {
-    path: '/blocks'
+    path: '/blocks',
+    before: function(){
+      Session.set('blockLimit', 10);
+    },
+    action: function(){
+      var blocksHandle;
+      
+      Deps.autorun(function(){
+        var newBlocksHandle = Meteor.subscribe('blocks',Session.get('blockLimit'));
+        if( blocksHandle ) blocksHandle.stop();
+        blocksHandle = newBlocksHandle;
+      });
+      
+      this.render();
+    }
   });
   
   this.route('addressList', {
