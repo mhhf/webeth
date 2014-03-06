@@ -1,5 +1,5 @@
 Template.blocks.blocks = function(){
-  return Blocks.find();
+  return Blocks.find({},{ sort: { number: -1 }});
 }
 Template.blocks.getTime = function(){
   var date = new Date(this.timestamp*1000);
