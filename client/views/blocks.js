@@ -18,8 +18,6 @@ scrollHandler = function(){
       var cLimit;
       if( ( cLimit = Session.get('blockLimit') )-10 <= Blocks.find().count() ) 
         Session.set('blockLimit',cLimit + 10 );
-      else
-        target.remove();
     }
   
 }

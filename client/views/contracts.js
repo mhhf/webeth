@@ -26,8 +26,6 @@ scrollHandler = function(){
       var cLimit;
       if( ( cLimit = Session.get('contractLimit') )-10 <= Contracts.find().count() ) 
         Session.set('contractLimit',cLimit + 10 );
-      else
-        target.remove();
     }
   
 }
