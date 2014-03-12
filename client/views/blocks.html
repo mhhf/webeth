@@ -10,11 +10,16 @@
   </thead>
   <tbody>
   {{#each blocks}}
-  <tr>
-    <td>{{number}}</td>
-    <td>{{_id}}</td>
-    <td>{{getTime}}</td>
-  </tr>
+    <tr>
+      <td>{{number}}</td>
+      <td>
+        <a href="{{pathFor 'block'}}">
+          {{_id}} 
+        </a>
+      </td>
+      <td>{{timeSince timestamp}} ago</td>
+    </tr>
+    
   {{/each}}
   <tr>
     <td colspan="3" id="showMore"> <center>loading...</center> </td>

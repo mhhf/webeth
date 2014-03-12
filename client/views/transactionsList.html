@@ -1,0 +1,27 @@
+<template name="transactionsList">
+<h1>Transactions</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>sender</th>
+      <th>receiver</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each txs}}
+    <tr>
+      <td>{{sender}} ({{nonce}})</td>
+      <td>
+        {{receiver}}
+      </td>
+      <td>{{getValue}}</td>
+    </tr>
+    
+  {{/each}}
+  <tr>
+    <td colspan="3" id="showMore"> <center>loading...</center> </td>
+  </tr>
+  </tbody>
+</table>
+</template>

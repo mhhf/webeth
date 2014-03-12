@@ -3,6 +3,27 @@ Template.navBar.events = {
     e.preventDefault();
     
     Meteor.logout();
+  },
+  "submit": function(e,t){
+    e.preventDefault();
+    var search = t.find('input[name=search]').value;
+    
+    Meteor.call('search',{
+      req: search
+    }, function(err, resp){
+      if(!resp) return false;
+      
+      switch( resp.found ) {
+        case 'block':
+          Router.go('/block/'+search);
+          break;
+        case 'contract':
+          Router.go('/contract/'+search);
+          break;
+      }
+      
+    });
+    
   }
 }
 

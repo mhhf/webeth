@@ -4,6 +4,7 @@
     "spin": {},
     "dateformatjs": {},
     "codemirror": {},
-    "google-authenticator": {}
+    "google-authenticator": {},
+    "bootboxjs": {}
   }
 }

@@ -6,7 +6,8 @@
       "spin": {},
       "dateformatjs": {},
       "codemirror": {},
-      "google-authenticator": {}
+      "google-authenticator": {},
+      "bootboxjs": {}
     },
     "packages": {
       "iron-router": {
@@ -33,6 +34,11 @@
         "git": "https://github.com/denkhaus/google-authenticator.git",
         "tag": "v0.0.2",
         "commit": "4a750938db346a3681a58ff37bced96e12ab7662"
+      },
+      "bootboxjs": {
+        "git": "https://github.com/TimHeckel/meteor-bootboxjs.git",
+        "tag": "v3.2.2",
+        "commit": "580adfebfa12b4d2186a80cec1109dab74ad6228"
       }
     }
   }

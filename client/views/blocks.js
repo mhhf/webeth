@@ -1,11 +1,6 @@
 Template.blocks.blocks = function(){
   return Blocks.find({},{ sort: { number: -1 }});
 }
-Template.blocks.getTime = function(){
-  var date = new Date(this.timestamp*1000);
-  var dateStr = dateFormat(date); 
-  return dateStr;
-}
 
 scrollHandler = function(){
  var threshold, target = $('#showMore');
@@ -19,8 +14,12 @@ scrollHandler = function(){
       if( ( cLimit = Session.get('blockLimit') )-10 <= Blocks.find().count() ) 
         Session.set('blockLimit',cLimit + 10 );
     }
-  
 }
 
 $(window).scroll(scrollHandler);
 
+Template.blocks.events = {
+  "click tr": function(e,t){
+    console.log(e);
+  }
+}

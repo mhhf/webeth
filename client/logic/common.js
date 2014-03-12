@@ -67,6 +67,8 @@ if( sabzo.match(/000$/) ) {
   else
     return finney+" finney"
 } else
-  return sabzo + " sabzo";
-  
+  if(sabzo.length > 0 )
+    return sabzo + " sabzo";
+  else
+    return '<1 sabzo';
 }

@@ -5,17 +5,23 @@
     <tr>
       <th>balance</th>
       <th>hash</th>
+      <th>code</th>
+      <th>memory</th>
     </tr>
   </thead>
   <tbody>
   {{#each contracts}}
   <tr>
     <td>{{getBalance}}</td>
-    <td>{{_id}}</td>
+    <td>
+      <a href="{{pathFor 'contract'}}"> {{_id}} </a>
+    </td>
+    <td>{{#if hasCode}}<i class="icon-ok"></i>{{/if}}</td>
+    <td>{{#if hasMemory}}<i class="icon-ok"></i>{{/if}}</td>
   </tr>
   {{/each}}
   <tr>
-    <td colspan="3" id="showMore"> <center>loading...</center> </td>
+    <td colspan="5" id="showMore"> <center>loading...</center> </td>
   </tr>
   </tbody>
 </table>

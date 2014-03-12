@@ -1,4 +1,4 @@
-RequestQueue = new Meteor.Collection('requests');
+RequestQueue = new Meteor.Collection('newnamerequest');
 
 Meteor.methods({
   "addCmi": function(o){
@@ -16,5 +16,23 @@ Meteor.methods({
     console.log(req);
     
     RequestQueue.insert({ timestamp: new Date(), request:req })
+  },
+  addNewName: function(o){
+    if( !(
+           typeof o.name == "string" 
+        && o.name.length <= 64 
+        && typeof o.value == "string"
+        && o.value.length <= 64
+        ) )
+      return false;
+    
+    RequestQueue.insert({ 
+      timestamp: new Date(),
+      address: '56fed5c3a60387ee3833e5528efa0ab034217f73',
+      name: o.name, 
+      value: o.value
+    });
+    
+    return true;
   }
 });

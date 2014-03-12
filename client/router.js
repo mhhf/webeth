@@ -1,3 +1,6 @@
+// TODO: fuck port subscribe somewhere else
+// Meteor.subscribe('transactions');
+
 Router.configure({
   layoutTemplate: 'layout',
   notFoundTemplate: 'notFound',
@@ -12,6 +15,18 @@ Router.map(function () {
   
   this.route('addCmi', {
     path: '/add'
+  });
+  
+  this.route('block', {
+    path: '/block/:_id',
+    before: function(){
+      return Meteor.subscribe('block',this.params._id);
+    },
+    data: function(){
+      return {
+        block: Blocks.findOne({ _id: this.params._id })
+      }
+    }
   });
   
   this.route('blocks', {
@@ -34,6 +49,30 @@ Router.map(function () {
   
   this.route('addressList', {
     path: '/address/list'
+  });
+  
+  this.route('transactionsList', {
+    path: '/tx/list',
+    waitOn: function(){
+      return Meteor.subscribe('transactions');
+    },
+    data: function(){
+      return {
+        txs: Transactions.find()
+      };
+    }
+  });
+  
+  this.route('contract', {
+    path: '/contract/:_id',
+    before: function(){
+      return Meteor.subscribe('contract',this.params._id);
+    },
+    data: function(){
+      return {
+        contract: Contracts.findOne({_id: this.params._id})
+      };
+    }
   });
   
   this.route('contracts', {
@@ -70,6 +109,22 @@ Router.map(function () {
     path: '/contractsdb/browse'
   });
   
+  this.route('namingContract', {
+    layoutTemplate: 'navlayout',
+    yieldTemplates: {
+      'contractdbNavi': {to: 'navi'}
+    },
+    path: '/dev/naming'
+  });
+  
+  this.route('newName', {
+    layoutTemplate: 'navlayout',
+    yieldTemplates: {
+      'contractdbNavi': {to: 'navi'}
+    },
+    path: '/dev/naming/new'
+  });
+  
   this.route('login', { });
   this.route('signUp', { });
   
@@ -96,6 +151,5 @@ Router.map(function () {
       'userSideBar': {to: 'navi'}
     }
   });
-  
   
 });

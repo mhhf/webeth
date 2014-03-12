@@ -1,0 +1,42 @@
+<template name="contract">
+
+  <h2>Contract</h2>
+  <h3>Meta</h3>
+  <table class="table">
+    <tr>
+      <th>Hash</th>
+      <td>{{contract._id}}</td>
+    </tr>
+    <tr>
+      <th>Balance</th>
+      <td>{{contract.balance}}</td>
+    </tr>
+  </table>
+  
+  <h3>Code</h3>
+  {{#each getMemory contract.code}}
+    <span class="code">{{v}}</span>
+  {{/each}}
+  
+  <h3>Transactions</h3>
+  TODO
+  
+  <h3>Memory</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>key</th>
+        <th>value</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each getMemory contract.memory}}
+    <tr>
+      <td>{{filter k}}</td>
+      <td>{{filter v}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+  </table>
+  
+</template>

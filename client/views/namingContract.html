@@ -1,0 +1,23 @@
+<template name="namingContract">
+<div id="newNamingWrapper"> <a href="{{pathFor 'newName'}}" name="newName" class="btn">New Name</a> </div>
+<div id="lookupWrapper">
+  <form>
+    <center> <h3>Search for name/ hash</h3> </center>
+    <input type="text" placeholder="name / hash" name="lookup" />
+    <input name="submitLookup" type="submit" value="Lookup" />
+  </form>
+</div>
+</template>
+
+
+<template name="newName">
+<div id="newNameWrapper">
+  <form>
+    Name:
+    <input type="text" placeholder="name" name="name" />
+    Hash:
+    <input type="text" placeholder="hash" name="hash" />
+    <input name="submitLookup" type="submit" value="Add" />
+  </form>
+</div>
+</template>

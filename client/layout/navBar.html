@@ -4,10 +4,18 @@
     <li class="{{isActive '/ '}}"> <a href="{{pathFor 'home'}}">Home</a> </li>
     <!-- <li class="{{isActive '/add'}}"><a href="{{pathFor 'addCmi'}}">add Contract</a></li> -->
     <li class="{{isActive '/blocks'}}"><a href="{{pathFor 'blocks'}}">Blocks</a></li>
+    <li class="{{isActive '/tx'}}"><a href="{{pathFor 'transactionsList'}}">Transactions</a></li>
     <li class="{{isActive '/address'}}"><a href="{{pathFor 'addressList'}}">Address</a></li>
     <li class="{{isActive '/contracts'}}"><a href="{{pathFor 'contracts'}}">Contracts</a></li>
     <li class="{{isActive '/dev'}}"><a href="{{pathFor 'dev'}}">Develop</a></li>
+    <li>
+    <form>
+      <input name="search" type="text"  placeholder="contract / address / name " />
+      <input type="submit" value="search" >
+    </form>
+    </li>
   </ul>
+  
 
   <ul class="nav pull-right accountNav">
     {{#if currentUser}}
