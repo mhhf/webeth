@@ -19,3 +19,8 @@ Meteor.publish('contracts', function( limit ){
 Meteor.publish('transactions', function(){
   return Transactions.find();
 });
+
+Meteor.publish('code', function(_id){
+  var o = _id? {_id:_id}:{};
+  return Code.find(o);
+});

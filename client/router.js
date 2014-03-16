@@ -93,38 +93,6 @@ Router.map(function () {
     }
   });
   
-  this.route('dev', {
-    layoutTemplate: 'navlayout',
-    yieldTemplates: {
-      'contractdbNavi': {to: 'navi'}
-    },
-    path: '/dev'
-  });
-  
-  this.route('browseContractsDb', {
-    layoutTemplate: 'navlayout',
-    yieldTemplates: {
-      'contractdbNavi': {to: 'navi'}
-    },
-    path: '/contractsdb/browse'
-  });
-  
-  this.route('namingContract', {
-    layoutTemplate: 'navlayout',
-    yieldTemplates: {
-      'contractdbNavi': {to: 'navi'}
-    },
-    path: '/dev/naming'
-  });
-  
-  this.route('newName', {
-    layoutTemplate: 'navlayout',
-    yieldTemplates: {
-      'contractdbNavi': {to: 'navi'}
-    },
-    path: '/dev/naming/new'
-  });
-  
   this.route('login', { });
   this.route('signUp', { });
   

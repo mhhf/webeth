@@ -1,4 +1,5 @@
 RequestQueue = new Meteor.Collection('newnamerequest');
+NewContractRequest = new Meteor.Collection('newcontractrequest');
 
 Meteor.methods({
   "addCmi": function(o){

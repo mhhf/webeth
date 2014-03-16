@@ -11,12 +11,33 @@ Meteor.methods({
 
     return false;
   },
+
   getName: function( name ){
     var contract = Contracts.findOne({_id:'56fed5c3a60387ee3833e5528efa0ab034217f73'});
     return _.find(contract.memory, function(v,k){
       return k == '0x'+name+fillZeros(64-name.length);
     });
+  },
+
+  // [TODO] - security and error checking
+  deployCode: function( o ){
+    
+    var _id = Code.insert({
+      code: o.code,
+      desc: o.desc,
+      name: o.name,
+      date: new Date(),
+      user: {
+        name: Meteor.user().username,
+        _id: Meteor.userId()
+      },
+      address: null,
+      status: 'new'
+    });
+    
+    return true;
   }
+
 });
 
 fillZeros = function(n){

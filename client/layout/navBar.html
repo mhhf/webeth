@@ -7,7 +7,9 @@
     <li class="{{isActive '/tx'}}"><a href="{{pathFor 'transactionsList'}}">Transactions</a></li>
     <li class="{{isActive '/address'}}"><a href="{{pathFor 'addressList'}}">Address</a></li>
     <li class="{{isActive '/contracts'}}"><a href="{{pathFor 'contracts'}}">Contracts</a></li>
+    {{#if currentUser}}
     <li class="{{isActive '/dev'}}"><a href="{{pathFor 'dev'}}">Develop</a></li>
+    {{/if}}
     <li>
     <form>
       <input name="search" type="text"  placeholder="contract / address / name " />

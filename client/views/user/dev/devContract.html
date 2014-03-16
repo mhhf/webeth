@@ -1,0 +1,30 @@
+<template name="devContract">
+<a href="{{pathFor 'devContractNew'}}" class="btn">new Contract</a>
+
+<table class="table">
+<thead>
+  <tr>
+    <th>name</th>
+    <th>user</th>
+    <th>description</th>
+    <th>status</th>
+    <th>actions</th>
+  </tr>
+</thead>
+<tbody>
+  {{#each contracts}}
+  <tr>
+    <td>{{name}}</td>
+    <td>{{user.name}}</td>
+    <td>{{desc}}</td>
+    <td>{{status}}</td>
+    <td>
+      <a href="{{pathFor 'devContractFork'}}">fork</a>
+      <a href="#">code</a>
+      <a href="#">view</a>
+    </td>
+  </tr>
+  {{/each}}
+</tbody>
+</table>
+</template>
